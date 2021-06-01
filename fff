@@ -1,0 +1,43 @@
+CREATE DATABASE watersupply;
+USE watersupply;
+CREATE TABLE customers( 
+id BIGINT AUTO_INCREMENT,
+name VARCHAR(125) NULL,
+m_no BIGINT NULL,
+building_name VARCHAR(125) NULL,
+flat_no VARCHAR(50) NULL,
+area VARCHAR(125) NULL,
+coupons BIGINT NULL,
+PRIMARY KEY (id)
+);
+
+
+
+
+
+
+curl -X POST \
+ http://localhost:4040/customers/new \
+ -H "Content-Type: application/json" \
+ -d '{"name":"Nurahmat", "m_no": 9876543210, "building_name":"BCG", "flat_no":"7A", "area":"kochi", "coupons":567}'
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tambah User Baru</title>
+</head>
+<body>
+ <form action="/customers/new" method="POST">
+  <input type="text" name="name" placeholder="Name">
+  <input type="number" name="m_no" placeholder="Mobile Number">
+  <input type="text" name="building_name" placeholder="Building Name">
+  <input type="text" name="flat_no" placeholder="Flat Number">
+  <input type="text" name="area" placeholder="Area">
+  <input type="text" name="coupons" placeholder="Coupons">
+  
+  <button type="submit">Add</button>
+ </form>
+</body>
+</html>
