@@ -15,15 +15,43 @@
       font-size: 300%;
       padding: 10px;
       }
+
+    .button {
+      background-color: #20CE88;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
   </style>
+
+
 </head>
+
+
+
 <body>
   <h1>Water Supply Database</h1>
-  <p>
-    go to "/customers/list" to view the customer list
-  </p>
-  <p>
-    go to "/customers/new" to create a new customer
-  </p>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <button type="button" class="button" onclick="redirectFunc()">Click to view Customer DATABASE</button>
+    <script>
+      function redirectFunc() {
+        window.location.href = window.location.href+"customers";
+      }
+    </script>
+
 </body>
+
+
+
 </html>
